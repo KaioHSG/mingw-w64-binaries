@@ -125,9 +125,9 @@ echo %path% | findstr /i "%cd%\bin" > nul
 if %errorLevel% neq 0 (
     echo --------------------------------------------------  
     if %administrator% equ 1 (
-       setx /m path "%cd%\bin";"%path%"
+       setx /m path "%path%";"%cd%\bin"
     ) else (
-       setx path "%cd%\bin";"%path%"
+       setx path "%path%";"%cd%\bin"
     )
 )
 echo --------------------------------------------------  
